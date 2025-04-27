@@ -36,14 +36,21 @@ Aplikasi untuk mengecek ongkos kirim dan menemukan agen pengiriman terdekat meng
    composer install
    npm install
    ```
-
-3. Salin file .env.example menjadi .env dan atur konfigurasi
+3. build component
+   ```
+   npm run build
+   ```
+4. migration table and seeder
+   ```
+   php artisan migrate --seed
+   ```
+5. Salin file .env.example menjadi .env dan atur konfigurasi
    ```
    cp .env.example .env
    php artisan key:generate
    ```
 
-4. Konfigurasi database di file .env
+6. Konfigurasi database di file .env
    ```
    DB_CONNECTION=mysql
    DB_HOST=127.0.0.1
@@ -53,28 +60,28 @@ Aplikasi untuk mengecek ongkos kirim dan menemukan agen pengiriman terdekat meng
    DB_PASSWORD=
    ```
 
-5. Atur API key RajaOngkir dan URL API Wilayah Indonesia di file .env
+7. Atur API key RajaOngkir dan URL API Wilayah Indonesia di file .env
    ```
    RAJAONGKIR_API_KEY=your_api_key
    INDONESIA_REGION_API_URL=http://127.0.0.1:9000
    ```
 
-6. Jalankan migrasi dan seeder
+8. Jalankan migrasi dan seeder
    ```
    php artisan migrate --seed
    ```
 
-7. Kompilasi assets
+9. Kompilasi assets
    ```
    npm run dev
    ```
 
-8. Jalankan aplikasi
+10. Jalankan aplikasi
    ```
    php artisan serve
    ```
 
-9. Buka aplikasi di browser: `http://localhost:8000`
+11. Buka aplikasi di browser: `http://localhost:8000`
 
 ## Struktur Proyek
 
